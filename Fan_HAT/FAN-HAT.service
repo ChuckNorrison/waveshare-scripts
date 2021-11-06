@@ -1,0 +1,15 @@
+[Unit]
+Description=Waveshare FAN-HAT B Python Script
+
+[Service]
+ExecStart=sudo python3 ./mnt/zed/Fan_HAT/python/main.py
+User=admin
+Type=simple
+Restart=always
+TimeoutSec=120
+RestartSec=30
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

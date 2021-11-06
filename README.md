@@ -2,6 +2,7 @@
 Modified scripts for Raspberry PI Waveshare hw extensions
 
 ## Fan_HAT Script usage
+![image](https://user-images.githubusercontent.com/2964146/140618419-931f8ccb-7e41-4b3f-b751-ccc35d79a9b0.png)
 
 ### Install python and dependencies
     sudo apt-get update
@@ -22,3 +23,6 @@ copy the service file example to /etc/systemd/system/ and tweak the script path
 
 ### check logs
     sudo journalctl -fu FAN-HAT
+
+### links
+https://www.waveshare.com/fan-hat.htm

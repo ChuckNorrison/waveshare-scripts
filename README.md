@@ -23,6 +23,7 @@ copy the service file example to /etc/systemd/system/ and tweak the script path
 
 ### check logs
     sudo journalctl -fu FAN-HAT
+![image](https://user-images.githubusercontent.com/2964146/140618788-48d63065-90c5-4c77-a19d-d5100e4ae93d.png)
 
 ### links
 https://www.waveshare.com/fan-hat.htm

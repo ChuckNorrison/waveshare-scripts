@@ -10,8 +10,14 @@ Modified scripts for Raspberry PI Waveshare hw extensions
     sudo pip3 install RPi.GPIO
     sudo pip3 install smbus
 
+## Enable i2C Interface
+    sudo raspi-config
+     
+Choose Interfacing Options -> I2C ->yes 
+
 ### Run script manual
     git clone https://github.com/ChuckNorrison/waveshare-scripts
+    sudo chmod -R +x Fan_HAT/python/
     cd Fan_HAT/python/
     sudo python3 main.py
 

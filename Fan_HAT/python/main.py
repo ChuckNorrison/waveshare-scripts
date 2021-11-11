@@ -54,8 +54,8 @@ try:
 		localhost = s.getsockname()[0]
 
 		#log and update screen
-		print("ip:%s" %localhost)
-		log.info("ip:%s" %localhost)
+		print("ip: %s" %localhost)
+		log.info("ip: %s" %localhost)
 		draw.text((0,0), localhost, font=font, fill = 0)
 
 		# get temp
@@ -66,8 +66,8 @@ try:
 		file.close()
 
 		#log and update screen
-		print("temp : %.2f" %temp)
-		log.info("temp : %.2f" %temp)
+		print(strTemp)
+		log.info(strTemp)
 		draw.text((0,16), strTemp, font=font, fill = 0)
 		
 		# check temps and set fan pulse
@@ -92,17 +92,17 @@ try:
 					fan_pulse = 80
 
 				pwm.setServoPulse(0,fan_pulse)
-				log.info("Fan %d%%" % fan_pulse)
 			# default temp
 			elif temp > temp_target:
 				# default to min speed
 				fan_pulse = fan_steps
 				pwm.setServoPulse(0,fan_pulse)
-				log.info("Fan %d%%" % fan_pulse)
 			# good temp
 			elif temp < temp_target:
-				pwm.setServoPulse(0,0)
-				log.info("Fan off")
+				fan_pulse = 0
+				pwm.setServoPulse(0,fan_pulse)
+
+			log.info("fan: %d%%" %fan_pulse)
 
 		#show
 		oled.ShowImage(oled.getbuffer(image1.rotate(180)))
